@@ -2,3 +2,10 @@
 
 export(rHP)
 export(rNHPP)
+importFrom(Runuran,"pinv.new")
+importFrom(Runuran,"unuran.details")
+importFrom(Runuran,"uq")
+importFrom(stats,"optimize")
+importFrom(stats,"rexp")
+importFrom(stats,"rpois")
+importFrom(stats,"runif")

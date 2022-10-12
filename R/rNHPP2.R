@@ -15,7 +15,13 @@
 #' @param method The simulation method, "Thinning", "Numerical Inversion","cf Inversion"
 #'
 #' @return The event times of n replications and the replication number of each event
-#' @export  
+#' @importFrom Runuran "pinv.new"
+#' @importFrom Runuran "uq"
+#' @importFrom Runuran "unuran.details"
+#' @importFrom stats "rpois"
+#' @importFrom stats "runif"
+#' @importFrom stats "rexp"
+#' @export rNHPP  
 #' @examples rNHPP(n=10000,T=1000,lam0=function(x) {2000*(x+250)^(-2.33)},Lam0=NULL,Lam0Inv=NULL,method="Thinning")
 #' @examples rNHPP(n=10000,T=1000,lam0=function(x) {2000*(x+250)^(-2.33)},Lam0=NULL,Lam0Inv=NULL,method="Numerical Inversion")
 #' @examples rNHPP(n=10000,T=1000,lam0=function(x) {2000*(x+250)^(-2.33)},Lam0=function(x) {(-2000/1.33)*(x+250)^(-1.33)+(2000/1.33*250^(-1.33))},Lam0Inv=function(x) {(-(x-(2000/1.33*250^(-1.33)))*(1.33/2000))^(-(1/1.33))-250},method="cf Inversion")
